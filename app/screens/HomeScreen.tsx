@@ -1,20 +1,20 @@
 import { useRouter } from 'expo-router'; // Hook for navigation
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import CounterButton from '../components/CounterButton';
-import SosButton from '../components/SosButton';
+import CounterButton from '../../components/CounterButton';
+import SosButton from '../../components/SosButton';
 
-const ModalScreen = () => {
+const HomeScreen = () => {
   const router = useRouter();
 
-  const goToHomeScreen = () => {
-    router.push('/screens/HomeScreen'); // Correct path to HomeScreen
+  const openModal = () => {
+    router.push('/modal'); // Correct path to modal screen
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.message}>This is a modal</Text>
-      <Button title="Go to HomeScreen" onPress={goToHomeScreen} />
+      <Text style={styles.message}>Go to HomeScreen</Text>
+      <Button title="Open Modal" onPress={openModal} />
 
       {/* Extra features */}
       <View style={styles.extra}>
@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalScreen;
+export default HomeScreen;
